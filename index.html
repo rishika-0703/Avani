@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gipt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #dbf2ff;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      color: #d81b60;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #444;
+      font-size: 1.2rem;
+    }
+
+    img {
+      margin-top: 30px;
+      max-width: 80%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Fixed to 5 columns */
+  gap: 5px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+    .photo-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 180px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .card-name {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    #popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    #popup-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    #popupImage {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      .card {
+        max-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>To My Best Friend 💖</h1>
+    <p>A little surprise from everyone who loves you. Scroll down to see some sweet memories!</p>
+    <img src="Avani1.jpg" alt="Youu Avanii" width="400" height="500">
+  </div>
+<h4>Click each to view a secret message.</h4><br>
+  <div class="grid">
+    <!-- Card Template -->
+    <div class="card" onclick="openPopup('Rishika2.jpg', 'Hey bestie! This was a great moment we shared.')">
+      <img src="Rishika4.jpg" alt="Friend 1">
+      <div class="card-name">Rishika</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image2.png', 'You’re amazing and I’m lucky to have you!')">
+      <img src="friend2.jpg" alt="Friend 2">
+      <div class="card-name">Ananya</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image3.png', 'Hope this makes you smile today!')">
+      <img src="friend3.jpg" alt="Friend 3">
+      <div class="card-name">Tanmai</div>
+    </div>
+
+    <div class="card" onclick="openPopup('Shreya2.jpg', 'Aaniiii yaar teen saal kaise beet gaye pata hi nahi chala. Aise lag raha jaise kuch din pehle hi hum mile the 11E ke classroom mein (god I was so nervous that day😂).<br>You know agar you wouldn’t have been there then I have absolutely no idea how I would’ve survived 11th and 12th🥲🥲. I love all the gossip filled convos we’ve had and I’m waiting to have more. You’re my unpaid therapist🤩.<br>I can’t believe it’s already time to go to college. I’m so proud of you and wish you all the very best for college. I’m sure you’ll rock it❤❤. U better keep in touch main itni asani se tumhara peecha nahi chodungi😜😜.')">
+      <img src="Shreya3.jpg" alt="Friend 4">
+      <div class="card-name">Shreya</div>
+    </div>
+
+    <div class="card" onclick="openPopup('Navya3.jpg', 'Teri bahut yaad aane wali hai. Mereko ab society kae chutiyio sae kaun bacchayega bc and how tf am I even gonna survive in this khoon choosnae wali society without you. Abhinaya ki batsoorat shakal har roz akeli jhelin padegi. Kaise karungi!!! 😭😭😭. Beer akeli peene padegi aur Teri cafe wali coffee bhi nahi milegi. Ughhh kill me. The amount of times I had the thought of kidnapping u is insane even for a psychopath. But mereko Teri aazadi cheenae ka koi shauk nahi hai and as much as I would love to keep you here forever I know ki u want nothing more than to go out there and live your life to the fullest aur college jaa rahi hai toh teen char ladke zaaroor pataliyo u fs need that. I swear to fucking god avani u better call me atleast once a week bsc tere kisse is like my daily dose of samachaar. You also better visit me and everyone else during the holidays aur agar nahi kiya toh sabse pehle Teri gand maarne mai aaungi. Idk what more to say but I loveee you sooo much and I’m gonna miss you sooo much. And ik maine paragraph ki starting acche sae katayi na ki ho but ending mae I am gonna add the most common line you have already heard and will be hearing more ’Yeh din wapas nahi aane waale’ so enjoy to you fullest. Drama zada hogaya but it’s all for my Aunty Ji 😁😁😁')">
+      <img src="Navya2.jpg" alt="Friend 5">
+      <div class="card-name">Navya</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image6.png', 'Keep smiling, always!')">
+      <img src="friend6.jpg" alt="Friend 6">
+      <div class="card-name">Kashika</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image7.png', 'Love you loads! This ones for you.')">
+      <img src="friend7.jpg" alt="Friend 7">
+      <div class="card-name">Shriya</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image8.png', 'You’re the best thing that ever happened to us.')">
+      <img src="friend8.jpg" alt="Friend 8">
+      <div class="card-name">Sameera</div>
+    </div>
+
+    <div class="card" onclick="openPopup('image9.png', 'For Avani,<br>Even though you’re far away,<br>You’re the start of my day.<br>We don’t talk or meet a lot,<br>But you’re a friend I haven’t forgot.<br><br>You’re not just a friend, you’re family too,<br>And life’s just better with a bestie like you! <br>~ Rishiraj Singhania')">
+      <img src="Tara2.jpg" alt="Friend 9">
+      <div class="card-name">Rishiraj</div>
+    </div>
+  </div>
+
+  <!-- 5x5 Photo Grid -->
+  <h2 style="margin-top: 50px; color:#d63384;">More Fun !! 📸</h2>
+  <div class="photo-grid">
+    <!-- Add 25 images here -->
+    <img src="Rishika3.jpg" alt="Memory 1">
+    <img src="Anoonya1.jpg" alt="Memory 2">
+    <img src="Tanmai1.jpg" alt="Memory 3">
+    <img src="Birds2.jpg" alt="Memory 4">
+
+    <img src="Shriya1.jpg" alt="Memory 5">
+    <img src="Sameera1.jpg" alt="Memory 6">
+    <img src="Shreya1.jpg" alt="Memory 7">
+    <img src="Navya1.jpg" alt="Memory 8">
+
+    <img src="Kashika1.jpg" alt="Memory 9">
+    <img src="Avani4.jpg" alt="Memory 10">
+    <img src="Avani5.jpg" alt="Memory 11">
+    <img src="Avani6.jpg" alt="Memory 12">
+
+    <img src="Birds1.jpg" alt="You">
+    <img src="Avani2.jpg" alt="Memory 14">
+    <img src="Rishika.png" alt="Memory 15">
+    <img src="Avani7.jpg" alt="Memory 16">
+
+    <img src="Trio1.jpg" alt="Memory 17">
+    <img src="Tara1.jpg" alt="Memory 18">
+    <img src="Birds3.png" alt="Memory 19">
+    <img src="Avani3.jpg" alt="Memory 20">
+
+  </div>
+
+  <!-- Popup Image -->
+  <div id="popup" onclick="closePopup(event)">
+    <div id="popup-content">
+      <img id="popupImage" src="" alt="Love" />
+      <p id="popupText" style="margin-top:10px;"></p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(imageSrc, message) {
+      document.getElementById('popupImage').src = imageSrc;
+      document.getElementById('popupText').innerHTML = message;
+      document.getElementById('popup').style.display = 'flex';
+    }
+
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('popupImage').src = '';
+    }
+  </script>
+  
+</body>
+</html>
